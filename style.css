@@ -1,0 +1,142 @@
+/* Default Light Theme (applied by default) */
+:root {
+    /* Light Theme Variables */
+    --background-color: #D3CCBF;
+    --text-color: #171A18;
+    --primary-accent: #2D8A90;
+    --secondary-accent: #5D7D70;
+    --header-footer-bg: #004220;
+
+    /* Additional color variables you used but didn't define */
+    --sisal: #D3CCBF;          /* Same as background-color */
+    --heavy-metal: #171A18;    /* Same as text-color */
+    --parsley: #004220;        /* Same as header-footer-bg */
+    --lochinvar: #2D8A90;      /* Same as primary-accent */
+    --viridian-green: #5D7D70; /* Same as secondary-accent */
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --background-color: #171A18;
+    --text-color: #D3CCBF;
+    --primary-accent: #2D8A90;
+    --secondary-accent: #5D7D70;
+    --header-footer-bg: #004220;
+
+    /* Match or redefine as needed */
+    --sisal: #171A18;
+    --heavy-metal: #D3CCBF;
+    --parsley: #004220;
+    --lochinvar: #2D8A90;
+    --viridian-green: #5D7D70;
+}
+
+/* Ensure the html and body take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure the footer is pushed to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Main content area should grow to fill space between header and footer */
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-footer-bg);
+    color: var(--sisal);
+    padding: 1rem 0;
+    height: 80px;
+    width:  85%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+}
+
+header h1 {
+    margin: 0;
+    color: var(--sisal);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--sisal);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--lochinvar);
+}
+
+h2 {
+    color: var(--header-footer-bg);
+}
+
+a {
+    color: var(--lochinvar);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--viridian-green);
+}
+
+/* Footer styling remains the same but is now positioned at the bottom */
+footer {
+    background-color: var(--heavy-metal);
+    color: var(--sisal);
+    padding: 1rem 0;
+    height: 20px;
+    line-height: 0px;
+    width:  75%;
+    margin: 0 auto;
+    text-align: center;
+    flex-shrink: 0; /* Ensures the footer doesn't shrink */
+    border-radius: 30px 30px 0px 0px; /* Rounded bottom corners */
+}
+
+/* Theme Toggle Container */
+#theme-toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-right: 1rem;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background-color: var(--primary-accent);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--secondary-accent);
+    color: var(--background-color);
+}
